@@ -1,0 +1,91 @@
+
+/* anaglypic text effect on Vibes Pizza header */
+h1 {
+	text-align: center;
+	display: inline;
+	font: 200px Helvetica, Sans-Serif;
+	letter-spacing: -5px;
+	color: rgba(0,0,0,0.7);
+	margin-left: 200px;
+	
+}
+
+h1::after {
+	text-align:center;
+	content: "Vibes Pizza" ;
+	position: absolute; left: 110px; top: 5px;
+	color: rgba(255,255,255,0.7);
+	margin-left: 200px;
+}
+
+/*  end anaglypic effect */
+
+body {
+	background-image: url(../img/background.jpg);
+}
+/*make containers for option buttons*/
+.container {
+	width: 350px; 
+	height: 400px;
+	background-color:rgba(255,255,255,0.6);
+	border: 10px double black;
+	border-radius: 5%;
+	float: left;
+	margin-bottom:1em;
+	margin-left: 35px;
+	padding-right: 5%;
+	font: 25px Georgia, Helvetica, Sans-Serif;
+	text-shadow: 2px 2px 5px #6633CC;
+}
+
+h2 {
+	width: 430px; 
+	height: 100px;
+	background-color:rgba(255,255,255,0.8);
+	border-radius: 5%;
+	margin-top: 0px
+}
+
+
+
+
+
+
+/* end option containers */
+
+/* make containers for submit & cancel button */
+.submit {
+	width: 300px; 
+	height: 100px;
+	background-color:rgba(255,255,255,0.6);
+	border: 10px double black;
+	border-radius: 5%;
+	margin-left: 350px;
+	margin-right:-200px;
+	float: left;
+	font: 25px Georgia, Helvetica, Sans-Serif;
+	text-shadow: 2px 2px 5px #6633CC;
+	text-align: center;
+
+}
+/* end submit container */
+
+#order {
+	margin: 100px 450px;
+	width: 600px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: stretch;
+	font: 25px Georgia, Helvetica, Sans-Serif;
+	text-shadow: 2px 2px 5px #6633CC;
+	text-align: center;
+	background-color:rgba(255,255,255,0.6);
+	border: 10px double black;
+	border-radius: 5%;
+}
+
+.results {
+	margin-top: 35px;
+}

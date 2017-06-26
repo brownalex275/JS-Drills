@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Order Menu</title>
+  <link rel="stylesheet" href="./css/style.css" type="text/css">
+  </head>
+	
+  <body>
+	<h1>Vibes Pizza</h1>
+	<!----Make Buttons for options---->
+	<div id="wrap">
+		<div class = "container">
+			<h2>Pizza Size</h2>
+			<input type="radio" name="size" value="Personal" checked>Personal<br> 
+			<input type="radio" name="size" value="Medium">Medium<br> 
+			<input type="radio" name="size" value="Large">Large<br> 
+			<input type="radio" name="size" value="X-Large">X-Large<br> 
+		</div>
+		
+		<div class = "container">
+			<h2>Crust</h2>
+			<input type="radio" name="crust" value="Plain Crust" checked>Plain Crust<br>
+			<input type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust<br> 
+			<input type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed Crust<br> 
+			<input type="radio" name="crust" value="Spicy Crust">Spicy Crust<br> 
+			<input type="radio" name="crust" value="House Special Crust">House Special Crust<br> 
+		</div>
+		
+		<div class = "container">
+			<h2>Sauce</h2>
+			<input type="radio" name="sauce" value="Marinara Sauce" checked>Marinara Sauce<br>
+			<input type="radio" name="sauce" value="White Sauce">White Sauce<br> 
+			<input type="radio" name="sauce" value="Barbeque Sauce">Barbeque Sauce<br> 
+			<input type="radio" name="sauce" value="No Sauce">No Sauce<br> 
+		</div>
+			<div class = "container">
+			<h2>Cheese</h2>
+			<input type="radio" name="cheese" value="Regular" checked>Regular<br> 
+			<input type="radio" name="cheese" value="No Cheese">No Cheese<br> 
+			<input type="radio" name="cheese" value="Extra Cheese">Extra Cheese<br> 
+		</div>
+		
+		<div class = "container">
+			<h2>Meat Toppings</h2>
+			<input type="checkbox" name="meat" value="Pepperoni">Pepperoni<br> 
+			<input type="checkbox" name="meat" value="Sausage">Sausage<br> 
+			<input type="checkbox" name="meat" value="Canadian Bacon">Canadian Bacon<br> 
+			<input type="checkbox" name="meat" value="Ground Beef">Ground Beef<br>
+			<input type="checkbox" name="meat" value="Anchovy">Anchovy<br> 
+			<input type="checkbox" name="meat" value="Chicken">Chicken<br> 
+		</div>
+		<div class = "container">
+			<h2>Veggie Toppings</h2>
+			<input type="checkbox" name="veggies" value="Tomatoes">Tomatoes<br>
+			<input type="checkbox" name="veggies" value="Onions">Onions<br> 
+			<input type="checkbox" name="veggies" value="Olives">Olives<br> 
+			<input type="checkbox" name="veggies" value="Green Peppers">Green Peppers<br> 
+			<input type="checkbox" name="veggies" value="Mushrooms">Mushrooms<br> 
+			<input type="checkbox" name="veggies" value="Pineapple">Pineapple<br> 
+			<input type="checkbox" name="veggies" value="Spinach">Spinach<br> 
+			<input type="checkbox" name="veggies" value="Jalapenos">Jalapenos<br> 
+		</div>
+				
+	</div>
+	<!-----Make Receipt----->
+	<div id="order">
+		<div id="title1"><h4>Your Order:</h4></div>
+		<div id="showItems" class="results"></div>
+		<div id="title2"><h4>Subtotal:</h4></div>
+		<div id="showTotal" class="results"></div>
+		<div id= "title3"><h4>Total Price:</h4></div>
+		<div id="showTotal2" class="results"></div>
+	</div>
+	<!-----/end option buttons-->
+	<!----make Submit & Cancel buttons--->
+		<button id ="submit" type ="button" onclick="submitOrder();"class ="submit"><h3>Submit Order</h3></button>
+		<button id= "cancel" type ="button" onclick=""class ="submit"><h3>Cancel Order</h3></button>
+    <!--/end buttons--->
+	
+ 	<script src="./js/script.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<script>
+	$('#submit').css('cursor', 'pointer');
+	$('#cancel').css('cursor', 'pointer');
+	$(function(){
+		$('#order').hide();
+		});
+	$(function() {
+		$( "#submit" ).click(function() {
+			$( "#order" ).show();
+		});
+	});
+	
+	$(function() {
+		$( "#cancel" ).click(function() {
+			$("#showItems").html("");
+			$("#showTotal").html("");
+			$("#showTotal2").html("");
+			$('#order').hide();
+		});
+	});
+</script>
+  </body>
+</html>
