@@ -54,6 +54,13 @@ h2 {
 /* end option containers */
 
 /* make containers for submit & cancel button */
+#wrap {
+	width: 960px;
+	margin: 0 auto;
+	position: relative;
+}
+
+
 .submit {
 	width: 300px; 
 	height: 100px;
