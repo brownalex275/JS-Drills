@@ -1,3 +1,9 @@
+/* tried to fix appearence on different computers */
+#wrap {
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+}
 
 /* anaglypic text effect on Vibes Pizza header */
 h1 {
@@ -15,7 +21,7 @@ h1::after {
 	content: "Vibes Pizza" ;
 	position: absolute; left: 110px; top: 5px;
 	color: rgba(255,255,255,0.7);
-	margin-left: 200px;
+	margin-left: 105px;
 }
 
 /*  end anaglypic effect */
@@ -54,11 +60,7 @@ h2 {
 /* end option containers */
 
 /* make containers for submit & cancel button */
-#wrap {
-	width: 960px;
-	margin: 0 auto;
-	position: relative;
-}
+
 
 
 .submit {
@@ -92,11 +94,10 @@ h2 {
 	border: 10px double black;
 	border-radius: 5%;
 }
-
 .results {
 	margin-top: 35px;
 	margin-left: 10px;
 }
 h6 {
-	margin-bottom: 200px;
+	margin-top: -80px;
 }
