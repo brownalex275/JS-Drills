@@ -26,9 +26,11 @@ function submitOrder()
 	}
 	total = sizeTotal;
 	addMeat(total,text1,text2); 
-};	
+	};
+	
 
 function addMeat(total, text1, text2) {
+	var total = total;
 	var meatTotal = 0;
 	var chooseMeat = [];
 	var meatVal =  document.getElementsByName('meat');
@@ -36,26 +38,26 @@ function addMeat(total, text1, text2) {
 		if (meatVal[j].checked) {
 			chooseMeat.push(meatVal[j].value);
 		}
-		meatNum = chooseMeat.length;
+	}
+		var meatNum = chooseMeat.length;
 		if (meatNum > 1) {
-			meatTotal = (meatNum - 1);
+			meatTotal = meatNum - 1;
 		}
 		else {
 			meatTotal = 0;
 		}
-	}	
+		
 	total = (total + meatTotal);
 	
 	for (var j=0; j < chooseMeat.length; j++) {
 		text1 = text1+chooseMeat[j]+"<br>";
-		if (meatTotal <= 1) {
+		if (meatNum <= 1) {
 			text2 = text2 + 0 +"<br>";
 			meatNum = (meatNum - 1);
-		}
-		else if (meatNum == 2) {
-			text2 = text2 + 1 + "<br>";
-		}
-		else {
+		}else if (meatNum == 2) {
+			text2 = text2 +1+ "<br>";
+			meatNum = (meatNum -1);
+		}else {
 			text2 = text2 +1+"<br>";
 			meatNum = (meatNum -1);
 		}
@@ -71,28 +73,27 @@ function addVeggies(total, text1, text2) {
 		if (vegVal[j].checked) {
 			chooseVeggies.push(vegVal[j].value);
 		}
-		vegNum = chooseVeggies.length;
-		if (vegNum > 1) {
-			vegTotal = (vegNum - 1);
+	}
+		var vegNum = chooseVeggies.length;
+		if (vegNum >= 2) {
+			vegTotal = vegNum - 1;
 		}
 		else {
 			vegTotal = 0;
 		}
-	}	
+		
 	total = (total + vegTotal);
 	for (var j=0; j < chooseVeggies.length; j++) {
 		text1 = text1+chooseVeggies[j]+"<br>";
-		if (vegTotal <= 1) {
+		if (vegNum <= 1) {
 			text2 = text2 +0 +"<br>";
-			vegNum = (vegNum - 1);
-		}
-		else if (vegNum == 2) {
+			vegNum = vegNum - 1;
+		}else if (vegNum == 2) {
 			text2 = text2 + 1 + "<br>"
-			vegNum = (vegNum -1)
-		}
-		else {
+			vegNum = vegNum -1
+		}else {
 			text2 = text2 + 1 + "<br>";
-			vegNum = (vegNum -1);
+			vegNum = vegNum -1;
 		}
 	}
 	addCheese(total,text1,text2);
